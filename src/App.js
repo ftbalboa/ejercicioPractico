@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Article } from './components/Article';
 import { GenDummies } from './functions/GenDummies';
 import './scss/App.scss';
 
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        HOLA!
+        {dummies.map((dummy, index)=>(<Article info={dummy} key={index}/>))}
       </header>
     </div>
   );

@@ -1,0 +1,15 @@
+@import './mixins';
+
+.ArticleTypeOne{
+    @include flexCenterColumn;
+    img{
+        width:280px;
+        height: 186.67px;
+    }
+    em{
+        color:$secondary-color;
+    }
+    .AtoBajada{
+        width:280px;
+    }
+}
