@@ -1,0 +1,27 @@
+@import './reset';
+@import './variables';
+
+@function weight($weight-name){
+  @return map-get($font-weights, $weight-name)
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin mobile {
+  @media(max-width: $mobile){
+    @content;
+  }
+}
+
+body{
+  @include flexCenter;
+  background-color: $primary-color;
+  font-weight: weight(bold);
+  @include mobile {
+    
+  }
+}
