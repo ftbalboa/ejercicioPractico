@@ -1,10 +1,10 @@
-import { ArticleTypeOne } from './ArticlesTypes/ArticleTypeOne';
+import { ArticleOne } from './ArticlesTypes/ArticleOne';
 
 export function Article({info}) {
 console.log(info);
   return (
     <div className="Article">
-        <ArticleTypeOne info={info} />
+        <ArticleOne info={info} />
     </div>
   );
 }

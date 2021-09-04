@@ -1,14 +1,37 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200..900&display=swap');
+
+$main-font: 'Roboto Slab', serif;
+$secondary-font: Arial, Helvetica, sans-serif;
+
 $primary-color: #ffffff;
 $secondary-color: #0074c4;
 
-$text-color: #000000;
+$text-color: #272727;
+
+$font-size: 1.1rem;
 
 $font-weights: (
   "regular": 400,
-  "medium": 500,
+  "medium": 600,
   "bold": 700
+);
+
+$font-sizes: (
+  "small": 0.8rem,
+  "regular": 1.1rem,
 );
 
 $mobile: 800px;
 $tablet: 1200px;
 $desktop: 2000px;
+
+// getters
+
+@function weight($weight-name){
+  @return map-get($font-weights, $weight-name);
+}
+
+@function fontSizes($size-name){
+  @return map-get($font-sizes, $size-name);
+}

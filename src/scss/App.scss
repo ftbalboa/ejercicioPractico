@@ -1,7 +1,7 @@
-@import './reset';
 @import './variables';
-@import './ArticleTypeOne';
+@import './reset';
 @import './mixins';
+@import './Article';
 
 @mixin mobile {
   @media(max-width: $mobile){
@@ -9,15 +9,15 @@
   }
 }
 
-@function weight($weight-name){
-  @return map-get($font-weights, $weight-name);
-}
 
 body{
   @include flexCenterColumn;
   background-color: $primary-color;
-  font-weight: weight(bold);
   @include mobile {
     
   }
+}
+
+em{
+  all: initial;
 }

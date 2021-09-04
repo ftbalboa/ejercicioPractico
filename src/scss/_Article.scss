@@ -1,0 +1,38 @@
+@import "./mixins";
+
+@mixin volanta {
+  color: $secondary-color;
+  font-size: $font-size;
+}
+
+.Article {
+  @include flexCenterColumn;
+  cursor: pointer;
+  &:hover {
+    a {
+      opacity: 0.8;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  em {
+    color: $secondary-color;
+    font-size: $font-size;
+  }
+  #{&}_one {
+    #{&}_title {
+      width: 100%;
+      font-weight: weight(normal);
+      margin-bottom: 0.5rem;
+    }
+    #{&}_author {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      font-size: fontSizes(small);
+      font-weight: weight(medium);
+      font-family: $secondary-font !important;
+    }
+  }
+}
