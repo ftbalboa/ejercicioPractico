@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Article } from './components/Article';
 import { GenDummies } from './functions/GenDummies';
-import './scss/App.scss';
+import './scss/styles.scss';
 
 function App() {
   const [dummies, setDummies] = useState([])

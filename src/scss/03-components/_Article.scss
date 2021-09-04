@@ -1,0 +1,108 @@
+@mixin Article_volanta {
+  color: $secondary-color;
+  font-size: $font-size;
+}
+
+@mixin Article_title {
+  font-weight: weight(normal);
+  margin-bottom: 0.5rem;
+}
+
+@mixin Article_author {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  font-size: fontSizes(small);
+  font-weight: weight(medium);
+  font-family: $secondary-font !important;
+}
+
+@mixin Article_bajada {
+  color: #333333;
+  line-height: fontSizes(paragraph) * 1.5;
+  font-size: fontSizes(paragraph);
+  font-weight: 100;
+  margin-bottom: 0.7rem;
+  font-family: $secondary-font !important;
+}
+
+@mixin Article_authorImg {
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border: $border-default;
+  border-radius: 100%;
+  img {
+    border-radius: 100%;
+  }
+  margin-bottom: 0.7rem;
+}
+
+.Article {
+  @include flexCenterColumn;
+  cursor: pointer;
+  &:hover {
+    a {
+      opacity: 0.8;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  em {
+    color: $secondary-color;
+    font-size: $font-size;
+    margin-right: 0.2em;
+  }
+}
+
+.Article_one {
+  @extend .Article;
+  &_title {
+    @include Article_title;
+  }
+  &_author {
+    @include Article_author;
+  }
+}
+
+.Article_two {
+  @extend .Article;
+  &_bajada {
+    @include Article_bajada;
+  }
+  &_title {
+    @include Article_title;
+  }
+  &_author {
+    @include Article_author;
+  }
+}
+
+.Article_three {
+  @extend .Article;
+  $padding: 1rem;
+  $hr-border: 0.05rem;
+  border: $border-default;
+  text-align: center;
+  padding: $padding $padding $padding;
+  margin: 1rem;
+  &_title {
+    @include Article_title;
+  }
+  &_author {
+    @include Article_author;
+    justify-content: center;
+  }
+  &_authorImg {
+    @include Article_authorImg;
+  }
+  hr {
+    border: none;
+    height: $hr-border;
+    position: relative;
+    background-color: $text-color;
+    width: 4rem;
+    bottom: -$padding - $hr-border;
+  }
+}

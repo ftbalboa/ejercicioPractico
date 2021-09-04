@@ -14,8 +14,6 @@ const KEY = "224affd0c5da4fdb88e3cd62fe80361a";
 
 const volantas = ["Análisis.", "Alerta.", "Historia.", "Inesperado."];
 const portraits = [por1, por2, por3, por4, por5];
-const nombres = ["Pedro", "Rodrigo", "Malena", "Sofia"];
-const apellidos = ["Suarez", "Perez", "López", "Rodriguez"];
 
 const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
