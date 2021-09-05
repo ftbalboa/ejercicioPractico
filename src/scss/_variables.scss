@@ -30,12 +30,13 @@ $font-sizes: (
 
 $border-default: 1px solid #ccc;
 $nav-height: 4rem;
-
+$nav-height-responsive: 2.8rem;
+$nav-mobile: 900px;
 // RESPONSIVE
 
-$mobile: 800px;
-$tablet: 1200px;
-$desktop: 2000px;
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1920px;
 
 // getters
 
