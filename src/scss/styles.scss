@@ -1,0 +1,20 @@
+@import './variables';
+@import './reset';
+@import './mixins';
+@import './03-components/Articles';
+@import './03-components/Nav';
+
+@mixin mobile {
+  @media(max-width: $mobile){
+    @content;
+  }
+}
+
+
+body{
+  @include flexCenterColumn;
+  background-color: $primary-color;
+  @include mobile {
+    
+  }
+}

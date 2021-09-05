@@ -12,10 +12,8 @@ const API = "https://newsapi.org/v2/everything";
 //const KEY = '87d5534e9b5f4e3381d8c7ccaf1385fb';
 const KEY = "224affd0c5da4fdb88e3cd62fe80361a";
 
-const volantas = ["Análisis", "Alerta", "Historia", "Inesperado"];
+const volantas = ["Análisis.", "Alerta.", "Historia.", "Inesperado."];
 const portraits = [por1, por2, por3, por4, por5];
-const nombres = ["Pedro", "Rodrigo", "Malena", "Sofia"];
-const apellidos = ["Suarez", "Perez", "López", "Rodriguez"];
 
 const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -32,27 +30,25 @@ export function GenDummies() {
     url: API,
     params: {
       sources: "la-nacion",
-      page: getRandomInt(0, 5),
+      page: getRandomInt(1, 5),
       pageSize: 15,
       apiKey: KEY,
     },
   }).then((res) => {
     return res.data.articles.map((article) => ({
-      titulo: randomNull(article.title, 0.8),
+      titulo: randomNull(article.title, 1),
       autor: randomNull(
-        nombres[getRandomInt(0, nombres.length - 1)] +
-          " " +
-          apellidos[getRandomInt(0, apellidos.length - 1)],
-        0.8
+        article.author,
+        1
       ),
-      img: randomNull(article.urlToImage, 0.8),
-      url: randomNull(article.url, 0.8),
-      bajada: randomNull(article.description, 0.8),
-      volanta: randomNull(volantas[getRandomInt(0, volantas.length - 1)], 0.8),
-      marquesina: randomNull("Marquesina " + getRandomInt(0, 9), 0.8),
+      img: randomNull(article.urlToImage, 1),
+      url: randomNull(article.url, 1),
+      bajada: randomNull(article.description, 1),
+      volanta: randomNull(volantas[getRandomInt(0, volantas.length - 1)], 1),
+      marquesina: randomNull("Marquesina " + getRandomInt(0, 9), 0.5),
       autorImg: randomNull(
         portraits[getRandomInt(0, portraits.length - 1)],
-        0.8
+        1
       ),
     }));
   });

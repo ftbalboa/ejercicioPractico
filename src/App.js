@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import { Article } from './components/Article';
+import { Nav } from './components/Header/Nav';
 import { GenDummies } from './functions/GenDummies';
-import './scss/App.scss';
+import './scss/styles.scss';
 
 function App() {
   const [dummies, setDummies] = useState([])
@@ -13,7 +15,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        HOLA!
+      <Nav />
+        {dummies.map((dummy, index)=>(<Article info={dummy} key={index}/>))}
       </header>
     </div>
   );
