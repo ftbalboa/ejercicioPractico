@@ -9,14 +9,6 @@ export function NovedadesContainer({ articles, title, link }) {
       </div>
     ));
 
-    const rowMap = (arts) => (
-        arts.reduce((acc,cv,i)=>{
-            i % 3 === 0? acc.push([cv]) : acc[acc.length-1].push(cv) 
-            return acc
-},[]
-        )
-    )
-
   return (
     <div className="NovedadesContainer">
       {handleTitle(title, link)}
