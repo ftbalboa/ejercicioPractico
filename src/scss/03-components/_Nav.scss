@@ -1,0 +1,107 @@
+@mixin bt {
+  margin: 0.6rem;
+  border-radius: 5px;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+  cursor: pointer;
+  border: none;
+  span {
+    font-size: fontSizes(little);
+    font-weight: weight(bold);
+    color:inherit;
+    font-family: inherit !important;
+  }
+  img{
+    width: 0.8rem;
+    margin-right: 0.5rem;
+}
+}
+
+.Nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  border-bottom: $border-default;
+  background-color: $primary-color;
+  position: fixed;
+  top: 0;
+  z-index: 102;
+
+  &_lanacion {
+    height: 1.8rem;
+  }
+
+  &_buttonContainer{
+      display:flex;
+  }
+}
+
+// BUTTONS
+
+.Nav_bt_secciones {
+    @include bt;
+    &_iconBlack{
+        &:hover{
+            display: none;
+        }
+    }
+    &_iconBlue{
+        display: none;
+    }
+    &:hover {
+        color: $secondary-color;
+        .Nav_bt_secciones_iconBlack{
+            display: none;
+        }
+        .Nav_bt_secciones_iconBlue{
+            display: initial;
+        }
+    }
+  }
+
+  .Nav_bt_buscar {
+    @include bt;
+    font-family: $secondary-font !important;
+    &_iconBlack{
+        &:hover{
+            display: none;
+        }
+    }
+    &_iconBlue{
+        display: none;
+    }
+    &:hover {
+        color: $secondary-color;
+        .Nav_bt_buscar_iconBlack{
+            display: none;
+        }
+        .Nav_bt_buscar_iconBlue{
+            display: initial;
+        }
+    }
+  }
+  .Nav_bt_suscribite {
+    @include bt;
+    font-family: $secondary-font !important;
+    border:$border-default;
+    background-color: yellow;
+    &:hover{
+        background-color: $text-color;
+        color:white;
+    }
+  }
+  .Nav_bt_ingresar {
+    @include bt;
+    border: 1px solid $secondary-color;
+    background-color: transparent;
+    color: $secondary-color;
+    &:hover{
+        background-color: $secondary-color;
+        color:white;
+    }
+}
+

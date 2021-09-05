@@ -169,6 +169,7 @@
 
 .Article_five {
   @extend .Article;
+  align-items: flex-start;
   &_title {
     @include Article_title;
     font-weight: weight(bold);
@@ -176,6 +177,7 @@
     a{
       font-size: inherit;
       font-weight: inherit;
+      width: 100%;
     }
     em{
       font-size: inherit;
@@ -189,5 +191,8 @@
   }
   p{
     @include Article_bajada;
+  }
+  img{
+    width: 100%;
   }
 }
