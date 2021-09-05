@@ -3,6 +3,7 @@
 @import './mixins';
 @import './03-components/Articles';
 @import './03-components/Nav';
+@import './03-components/ArtContainer';
 
 @mixin mobile {
   @media(max-width: $mobile){

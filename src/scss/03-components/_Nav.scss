@@ -24,11 +24,12 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: $nav-height;
   border-bottom: $border-default;
   background-color: $primary-color;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 102;
 
   &_lanacion {
