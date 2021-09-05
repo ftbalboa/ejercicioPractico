@@ -1,6 +1,6 @@
 import { Article } from "../../Article/";
 
-export function HeadContainer({ articles }) {
+export function HeadContainer({ articles, title, link }) {
   return (
     <div className="HeadContainer">
         <div className="HeadContainer_mainArticle">

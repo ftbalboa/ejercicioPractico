@@ -1,16 +1,11 @@
 import { Article } from "../../Article/";
+import { handleTitle } from "../ArtContainer";
 
 export function OpinionContainer({ articles, title, link }) {
-  const handleTitle = () => {
-    if (title) {
-      return <div className="titleContainer">
-      {link? <a href={link} >{title}</a> : {title}}
-      </div>;
-    }
-  };
+
   return (
     <div className="OpinionContainer">
-      {handleTitle()}
+      {handleTitle(title, link)}
       <div className="OpinionContainer_row">
         <div className="OpinionContainer_col">
           {articles[0] && <Article info={articles[0]} type="one" />}

@@ -42,6 +42,8 @@
     margin-left: 1rem;
     margin-right: 1rem;
     padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
     &_row{
         padding-top: 1rem;
         border-top: $border-default;
@@ -65,5 +67,41 @@
         height: 100%;
         padding-right: 1rem;
         padding-left: 1rem;
+    }
+}
+
+.NotasContainer{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    &_row{
+        padding-top: 1rem;
+        border-top: $border-default;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_col{
+        width: 31%;
+    }
+}
+
+.NovedadesContainer{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    &_row{
+        border-top: $border-default;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-between;
+    }
+    &_col{
+        margin-top: 1rem;
+        width: 30%;
     }
 }
