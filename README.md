@@ -20,7 +20,7 @@ La funcion GenDummies devuelve una promesa con un llamado a newsapi.org trayendo
 
 ### Articulo
 
-El componente de articulos consta de un indice desde donde se llaman y reenderizan los 5 tipos de modelos realizados
+El componente de articulos consta de un indice desde donde se llaman y reenderizan los 5 tipos de modelos realizados. Todos los links son funcionales y llevan a la noticia real.
 
 ### Header
 
