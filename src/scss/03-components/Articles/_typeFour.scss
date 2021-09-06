@@ -1,0 +1,58 @@
+.Article_four {
+  @include Article;
+  width: 100%;
+  height: 100%;
+  border: $border-default;
+  justify-content: flex-start;
+  &_topContainer {
+    height: 300px;
+    width: inherit;
+    a{
+      width: inherit;
+      height: 100%;
+    }
+    img {
+      object-fit: cover;
+      width: inherit;
+      height: 100%;
+    }
+    strong {
+      @include Article_adver;
+    }
+    @media (max-width: $tablet) {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &_botContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+    background-color: #c40f4d;
+    color: white;
+    padding: 5px 15px 0px 15px;
+    @media (max-width: $tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+  &_title {
+    @include Article_title;
+    margin: 0;
+    a {
+      color: white;
+    }
+    em {
+      color: white;
+    }
+  }
+  &_author {
+    @include Article_author;
+    color: inherit;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 100%;
+    padding-bottom: 0.3rem;
+  }
+
+}

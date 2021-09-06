@@ -1,0 +1,22 @@
+.Article_one {
+    @include Article;
+    &_title {
+      @include Article_title;
+      align-self: start;
+      @media (max-width: $tablet) {
+        font-weight: weight(bold);
+        @include mediaPadding;
+      }
+    }
+    &_author {
+      @include Article_author;
+      @media (max-width: $tablet) {
+        @include mediaPadding;
+      }
+    }
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+  }

@@ -1,21 +1,8 @@
-@import './variables';
-@import './reset';
-@import './mixins';
-@import './03-components/Articles';
-@import './03-components/Nav';
-@import './03-components/ArtContainer';
+@import './01-base/variables';
+@import './01-base/functions';
+@import './01-base/mixins';
+@import './02-config/reset';
+@import './03-components/Articles/index';
+@import './03-components/Nav/Nav';
+@import './03-components/ArtContainer/index';
 
-@mixin mobile {
-  @media(max-width: $mobile){
-    @content;
-  }
-}
-
-
-body{
-  @include flexCenterColumn;
-  background-color: $primary-color;
-  @include mobile {
-    
-  }
-}

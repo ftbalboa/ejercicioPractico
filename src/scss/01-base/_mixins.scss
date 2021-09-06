@@ -1,0 +1,13 @@
+@mixin flexCenterColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hoverOpacity {
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}

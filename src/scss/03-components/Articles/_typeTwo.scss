@@ -1,0 +1,28 @@
+.Article_two {
+    @include Article;
+    &_img{
+      display: none;
+      @media (max-width: $tablet) {
+        display: initial;
+      }
+    }
+    &_bajada {
+      @include Article_bajada;
+      @media (max-width: $tablet) {
+        @include mediaPadding;
+      }
+    }
+    &_title {
+      @include Article_title;
+      @media (max-width: $tablet) {
+        font-weight: weight(bold);
+        @include mediaPadding;
+      }
+    }
+    &_author {
+      @include Article_author;
+      @media (max-width: $tablet) {
+        @include mediaPadding;
+      }
+    }
+  }

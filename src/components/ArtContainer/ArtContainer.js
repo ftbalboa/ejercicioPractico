@@ -11,16 +11,16 @@ export function ArtContainer({ articles }) {
     <div className="ArtContainer">
       <HeadContainer articles={articlesSelect([0, 1, 2])} />
       <OpinionContainer
-        articles={articlesSelect([1, 2, 3])}
+        articles={articlesSelect([3, 4, 5])}
         title="Opinion"
         link="opinion"
       />
       <NotasContainer
-        articles={articlesSelect([4, 5, 6])}
+        articles={articlesSelect([6, 7, 8])}
         title="Notas"
       />
       <NovedadesContainer
-        articles={articlesSelect([7, 8, 9, 10, 11, 12])}
+        articles={articlesSelect([9, 10, 11, 12, 13, 14])}
         title="Novedades"
         link="Novedades"
       />

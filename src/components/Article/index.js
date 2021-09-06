@@ -4,8 +4,7 @@ import { ArticleTwo } from "./ArticlesTypes/ArticleTwo";
 import { ArticleFour } from "./ArticlesTypes/ArticleFour";
 import { ArticleFive } from "./ArticlesTypes/ArticleFive";
 
-export function Article({ info, type }) {
-  console.log(info);
+export function Article({ info, type, marginBot }) {
   const articleTypes = {
     one: (info) => <ArticleOne info={info} />,
     two: (info) => <ArticleTwo info={info} />,
@@ -14,7 +13,7 @@ export function Article({ info, type }) {
     five: (info) => <ArticleFive info={info} />,
   };
   return (
-    <div className="Article">
+    <div className={marginBot? "ArticleMarginBot" : "Article"}>
       {articleTypes[type] && articleTypes[type](info)}
     </div>
   );

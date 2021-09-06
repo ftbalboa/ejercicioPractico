@@ -1,0 +1,25 @@
+.NotasContainer {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    &_row {
+      @include mediaTabletReset;
+      padding-top: 1rem;
+      border-top: $border-default;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      @media (max-width: $tablet) {
+        padding: 0;
+        flex-direction: column;
+      }
+    }
+    &_col {
+      display: flex;
+      align-items: stretch;
+      width: 31%;
+      @media (max-width: $tablet) {
+          width: 100%;
+        }
+    }
+  }
+  

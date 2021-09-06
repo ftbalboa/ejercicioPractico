@@ -5,10 +5,10 @@ export function ArticleFour({ info }) {
   };
   return (
     <div className="Article_four">
-      <a href={info.url} className="Article_four_topContainer">
-        <img alt={info.title} src={info.img} />
+      <div className="Article_four_topContainer">
+        <a href={info.url}><img alt={info.title} src={info.img} /></a>
         <strong>ESPACIO PATROCINADO</strong>
-      </a>
+      </div>
       <div className="Article_four_botContainer">
         <div className="Article_four_title">
           <a href={info.url}>

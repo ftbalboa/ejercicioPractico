@@ -1,0 +1,30 @@
+.Article_three {
+    @include Article;
+    $padding: 1rem;
+    $hr-border: 0.05rem;
+    border: $border-default;
+    text-align: center;
+    padding: $padding $padding $padding;
+    height: 100%;
+    &_title {
+      @include Article_title;
+    }
+    &_author {
+      @include Article_author;
+      justify-content: center;
+    }
+    &_authorImg {
+      @include Article_authorImg;
+    }
+    hr {
+      border: none;
+      height: $hr-border;
+      position: relative;
+      background-color: $text-color;
+      width: 4rem;
+      bottom: -$padding - $hr-border;
+    }
+    @media (max-width: $tablet) {
+      margin: 0 1rem 0 1rem;
+    }
+  }

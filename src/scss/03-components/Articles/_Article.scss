@@ -1,0 +1,7 @@
+.ArticleMarginBot {
+    margin-bottom: 2rem;
+    @media (max-width: $tablet) {
+      margin: 0;
+    }
+  }
+  

@@ -1,0 +1,21 @@
+.OpinionContainer {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  &_row {
+    @include mediaTabletReset;
+    border-top: $border-default;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  &_col {
+    display: flex;
+    align-items: stretch;
+    width: 30%;
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+  }
+}

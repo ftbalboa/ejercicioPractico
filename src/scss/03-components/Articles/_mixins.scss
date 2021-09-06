@@ -1,0 +1,73 @@
+@mixin Article {
+  @include flexCenterColumn;
+  @include hoverOpacity;
+  img {
+    width: 100%;
+  }
+  em {
+    color: $secondary-color;
+    font-size: inherit;
+    font-weight: inherit;
+    margin-right: 0.2em;
+  }
+  @media (max-width: $tablet) {
+    margin-bottom: 2rem;
+  }
+}
+
+@mixin Article_volanta {
+  color: $secondary-color;
+  font-size: fontSizes(regular);
+}
+
+@mixin Article_title {
+  font-weight: weight(regular);
+  margin-bottom: 0.5rem;
+}
+
+@mixin Article_author {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  font-size: fontSizes(small);
+  font-weight: weight(bold);
+  font-family: $secondary-font !important;
+}
+
+@mixin Article_bajada {
+  color: #333333;
+  line-height: fontSizes(paragraph) * 1.5;
+  font-size: fontSizes(paragraph);
+  font-weight: weight(extraThin);
+  margin-bottom: 0.5rem;
+  font-family: $secondary-font !important;
+}
+
+@mixin Article_authorImg {
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border: $border-default;
+  border-radius: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  img {
+    border-radius: 100%;
+  }
+}
+
+@mixin Article_adver {
+  position: relative;
+  bottom: 40px;
+  left: 5px;
+  background-color: black;
+  color: $primary-color;
+  font-weight: weight(thin);
+  font-size: fontSizes(small);
+  font-family: $secondary-font !important;
+  padding: 2px 5px 2px 5px;
+}
+
+@mixin mediaPadding{
+  padding: 0 1rem 0.5rem 1rem ;
+}

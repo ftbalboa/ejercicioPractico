@@ -4,8 +4,8 @@ import { handleTitle } from "../ArtContainer";
 export function NotasContainer({ articles, title, link }) {
   const mapArticles = (articleType) =>
     articles.map((article, index) => (
-      <div className="NotasContainer_col">
-        <Article info={article} type = {articleType} key={index} />
+      <div className="NotasContainer_col"  key={index}>
+        <Article info={article} type = {articleType} />
       </div>
     ));
 
