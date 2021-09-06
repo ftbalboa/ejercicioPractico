@@ -1,0 +1,35 @@
+.Nav_bt_buscar {
+    @include bt;
+    font-family: $secondary-font !important;
+    &_iconBlack {
+      &:hover {
+        display: none;
+      }
+    }
+    &_iconBlue {
+      display: none;
+    }
+    &:hover {
+      color: $secondary-color;
+      .Nav_bt_buscar_iconBlack {
+        display: none;
+      }
+      .Nav_bt_buscar_iconBlue {
+        display: initial;
+      }
+    }
+    @media (max-width: $nav-mobile) {
+      border: none;
+      background-color: transparent;
+      color: $secondary-color;
+      span {
+        display: none;
+      }
+      img {
+        width: 1.2rem;
+      }
+      position: absolute;
+      right: -1.4rem;
+      top: -0.3rem;
+    }
+  }

@@ -1,0 +1,44 @@
+.Article_five {
+    @include Article;
+    margin-bottom: 0;
+    align-items: flex-start;
+    &_title {
+      @include Article_title;
+      font-weight: weight(bold);
+      font-size: fontSizes(big);
+      a{
+        font-size: inherit;
+        font-weight: inherit;
+        width: 100%;
+      }
+      em{
+        margin:0;
+      }
+      @media (max-width: $tablet) {
+        order:1;
+        font-size: fontSizes(regular);
+        margin: 0 0.5rem 0 0.5rem ;
+      }
+    }
+    &_author {
+      @include Article_author;
+      margin-bottom: 1.5em;
+      @media (max-width: $tablet) {
+        order:3;
+        margin: 0.5rem;
+      }
+    }
+    p{
+      @include Article_bajada;
+      @media (max-width: $tablet) {
+        order:2;
+        margin: 0.5rem;
+      }
+    }
+    img{
+      width: 100%;
+      @media (max-width: $tablet) {
+        order:0
+      }
+    }
+  }

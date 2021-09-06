@@ -1,0 +1,9 @@
+@mixin mediaTabletReset{
+    @media (max-width: $tablet) {
+        width: 100%;
+        border: none;
+        padding-right: 0;
+        padding-left: 0;
+        flex-direction: column;
+      }
+}

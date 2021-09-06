@@ -1,0 +1,37 @@
+@import './Buttons/index';
+
+.Nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $nav-height;
+  border-bottom: $border-default;
+  background-color: $primary-color;
+  z-index: 102;
+
+  @media (max-width: $nav-mobile) {
+    justify-content: flex-start;
+    padding-left: 0.6rem;
+    height: $nav-height-responsive;
+  }
+
+  &_lanacion {
+    @include hoverOpacity;
+    height: 1.8rem;
+    @media (max-width: $nav-mobile) {
+      height: 1rem;
+    }
+  }
+  &_buttonContainer {
+    display: flex;
+  }
+}
+
+
+
+
+

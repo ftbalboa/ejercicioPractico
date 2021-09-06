@@ -1,0 +1,18 @@
+.Nav_bt_secciones {
+  @include bt;
+  &_iconBlue {
+    display: none;
+  }
+  &:hover {
+    color: $secondary-color;
+    .Nav_bt_secciones_iconBlack {
+      display: none;
+    }
+    .Nav_bt_secciones_iconBlue {
+      display: initial;
+    }
+  }
+  @media (max-width: $nav-mobile) {
+    display: none;
+  }
+}

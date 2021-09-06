@@ -1,0 +1,22 @@
+.Article_two {
+    @include Article;
+    &_bajada {
+      @include Article_bajada;
+      @media (max-width: $tablet) {
+        padding: 0 0.5rem 0 0.5rem ;
+      }
+    }
+    &_title {
+      @include Article_title;
+      @media (max-width: $tablet) {
+        font-weight: weight(bold);
+          margin: 0 -0.2rem 0.5rem 0.2rem ;
+      }
+    }
+    &_author {
+      @include Article_author;
+      @media (max-width: $tablet) {
+        margin: 0 -0.2rem 0.5rem 0.2rem ;
+      }
+    }
+  }

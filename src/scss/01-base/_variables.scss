@@ -1,24 +1,17 @@
-// Google Fonts
+//Imports
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200..900&display=swap');
 
+//Fonts
 $main-font: 'Roboto Slab', serif;
 $secondary-font: Arial, Helvetica, sans-serif;
 
-
-$primary-color: #ffffff;
-$secondary-color: #0074c4;
-
-$text-color: #272727;
-
-$font-size: 1.1rem;
-
 $font-weights: (
+  "extraThin": 100,
   "thin": 200,
   "regular": 400,
   "medium": 600,
   "bold": 700
 );
-
 $font-sizes: (
   "big": 2rem,
   "subTitle":1.4rem,
@@ -28,18 +21,25 @@ $font-sizes: (
   "little":0.7rem,
 );
 
+//Colors
+$primary-color: #ffffff;
+$secondary-color: #0074c4;
+$text-color: #272727;
+
+//Border
 $border-default: 1px solid #ccc;
+
+//Nav
 $nav-height: 4rem;
 $nav-height-responsive: 2.8rem;
 $nav-mobile: 900px;
-// RESPONSIVE
 
+//Responsive
 $mobile: 320px;
-$tablet: 768px;
+$tablet: 767px;
 $desktop: 1920px;
 
-// getters
-
+//Getters
 @function weight($weight-name){
   @return map-get($font-weights, $weight-name);
 }

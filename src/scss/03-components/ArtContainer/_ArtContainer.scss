@@ -1,0 +1,31 @@
+.ArtContainer {
+  margin-top: $nav-height + 1.5rem;
+  max-width: 900px;
+  min-width: $mobile;
+  margin-right: 2rem;
+  margin-left: 1rem;
+  @media (max-width: $nav-mobile) {
+    margin-top: $nav-height-responsive + 1rem;
+  }
+}
+
+.titleContainer {
+  margin-bottom: 0.5rem;
+  font-weight: weight(bold);
+  font-size: fontSizes(subTitle);
+  a {
+    font-weight: inherit;
+    font-size: inherit;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    margin-left: 1rem;
+    border-bottom: $border-default;
+    margin-right: 1rem;
+    padding-bottom: 0.5rem ;
+    margin-bottom: 0;
+  }
+}

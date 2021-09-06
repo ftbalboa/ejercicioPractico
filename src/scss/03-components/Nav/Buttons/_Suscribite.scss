@@ -1,0 +1,19 @@
+.Nav_bt_suscribite {
+  @include bt;
+  font-family: $secondary-font !important;
+  border: $border-default;
+  background-color: yellow;
+  &:hover {
+    background-color: $text-color;
+    color: white;
+  }
+  @media (max-width: $nav-mobile) {
+    @include hoverOpacity;
+    position: absolute;
+    right: 1rem;
+    top: -0.3rem;
+    border: none;
+    background-color: transparent;
+    color: $secondary-color;
+  }
+}

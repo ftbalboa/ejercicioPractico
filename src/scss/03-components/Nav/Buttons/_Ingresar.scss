@@ -1,0 +1,14 @@
+.Nav_bt_ingresar {
+    @include bt;
+    border: 1px solid $secondary-color;
+    background-color: transparent;
+    color: $secondary-color;
+    &:hover {
+      background-color: $secondary-color;
+      color: white;
+    }
+    @media (max-width: $nav-mobile) {
+      display: none;
+    }
+  }
+  

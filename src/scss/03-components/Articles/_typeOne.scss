@@ -1,0 +1,21 @@
+.Article_one {
+    @include Article;
+    &_title {
+      @include Article_title;
+      @media (max-width: $tablet) {
+        font-weight: weight(bold);
+        padding: 0 0.5rem 0.5rem 0.5rem ;
+      }
+    }
+    &_author {
+      @include Article_author;
+      @media (max-width: $tablet) {
+        padding: 0 -0.5rem 0 0.5rem ;
+      }
+    }
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+  }
