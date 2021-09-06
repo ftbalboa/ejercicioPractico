@@ -7,26 +7,20 @@ import "./scss/styles.scss";
 function App() {
   // genera data para los articulos
 
-  const loadData = ()=>{
-
-    setDummies([...GenDummies(true)]);;
-  }
+  const loadData = () => {
+    GenDummies()
+      .then((dummiesForStore) => {
+        setDummies(dummiesForStore);
+      })
+      .catch((e) => {
+        setDummies([...GenDummies(true)]);
+      });
+  };
 
   const [dummies, setDummies] = useState([]);
   useEffect(() => {
     loadData();
-      }
-  , []);
-
-  // const loadData = ()=>{
-  //   GenDummies().then((dummiesForStore) => {
-  //     setDummies(dummiesForStore);
-  //   }). catch((e)=>{
-  //   setDummies([...GenDummies(true)]); console.log(e);})
-  // }
-
-
-
+  }, []);
 
   return (
     <div className="App">
