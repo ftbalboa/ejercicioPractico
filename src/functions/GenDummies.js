@@ -1,4 +1,5 @@
 import axios from "axios";
+import { DATA } from "./data/dataFromApi";
 
 //import imgs for PORTRAITS
 import por1 from "../assets/portrait1.png";
@@ -10,7 +11,7 @@ import lnImage from "../assets/Nav/placeholderLN.jpg";
 
 //API DATA
 const API = "https://newsapi.org/v2/everything";
-const KEY = "224affd0c5da4fdb88e3cd62fe80361a";
+const KEY = "87d5534e9b5f4e3381d8c7ccaf1385fb";
 
 const VOLANTAS = ["Análisis.", "Alerta.", "Historia.", "Inesperado."];
 const PORTRAITS = [por1, por2, por3, por4, por5];
@@ -26,21 +27,21 @@ const randomNull = (parametro, probabilidad) => {
 };
 
 export function GenDummies(force) {
+  const cleanModel = (articles)=> {
+    return articles.map((article) => ({
+      titulo: randomNull(article.title, 1),
+      autor: randomNull(article.author, 1),
+      img: randomNull(article.urlToImage, 1),
+      url: randomNull(article.url, 1),
+      bajada: randomNull(article.description, 1),
+      volanta: randomNull(VOLANTAS[getRandomInt(0, VOLANTAS.length - 1)], 1),
+      marquesina: randomNull("Marquesina " + getRandomInt(0, 9), 0.5),
+      autorImg: randomNull(PORTRAITS[getRandomInt(0, PORTRAITS.length - 1)], 1),
+    }))
+  }
   //utilizar force cuando no se desee usar la API o falle
   if (force) {
-    const model = () => ({
-      titulo: "Titulo",
-      autor: "Nombre Apellido",
-      img: lnImage,
-      url: "/prueba",
-      bajada: "descripcion de prueba, descripcion de prueba, descripcion de prueba, descripcion de prueba, descripcion de prueba,",
-      volanta: VOLANTAS[getRandomInt(0, VOLANTAS.length - 1)],
-      marquesina: "Marquesina " + getRandomInt(0, 9),
-      autorImg: PORTRAITS[getRandomInt(0, PORTRAITS.length - 1)],
-    });
-    let arr = [];
-    for(let i = 0; arr.length < 15; i++) arr.push(model())
-    return arr
+    return cleanModel(DATA[getRandomInt(0,1)].articles);
   }
 
   // get random info for newsapi
@@ -54,15 +55,6 @@ export function GenDummies(force) {
       apiKey: KEY,
     },
   }).then((res) => {
-    return res.data.articles.map((article) => ({
-      titulo: randomNull(article.title, 1),
-      autor: randomNull(article.author, 1),
-      img: randomNull(article.urlToImage, 1),
-      url: randomNull(article.url, 1),
-      bajada: randomNull(article.description, 1),
-      volanta: randomNull(VOLANTAS[getRandomInt(0, VOLANTAS.length - 1)], 1),
-      marquesina: randomNull("Marquesina " + getRandomInt(0, 9), 0.5),
-      autorImg: randomNull(PORTRAITS[getRandomInt(0, PORTRAITS.length - 1)], 1),
-    }));
+    return cleanModel(res.data.articles);
   });
 }
