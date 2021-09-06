@@ -7,7 +7,6 @@ import por2 from "../assets/portrait2.png";
 import por3 from "../assets/portrait3.png";
 import por4 from "../assets/portrait4.png";
 import por5 from "../assets/portrait5.png";
-import lnImage from "../assets/Nav/placeholderLN.jpg";
 
 //API DATA
 const API = "https://newsapi.org/v2/everything";

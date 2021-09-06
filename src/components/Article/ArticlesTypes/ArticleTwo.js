@@ -6,7 +6,7 @@ export function ArticleTwo({ info }) {
   return (
     <div className="Article_two">
       <a href={info.url} className="Article_two_img">
-        <img src={info.img}/>
+        <img src={info.img} alt={info.titulo}/>
       </a>
       <div className="Article_two_title">
         <a href={info.url}>

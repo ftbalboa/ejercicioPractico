@@ -6,6 +6,8 @@
   margin-left: 1rem;
   @media (max-width: $nav-mobile) {
     margin-top: $nav-height-responsive + 1rem;
+  }
+  @media (max-width: $tablet) {
     margin-right: 0;
     margin-left: 0;
   }
