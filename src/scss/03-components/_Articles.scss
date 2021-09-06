@@ -71,15 +71,28 @@
     font-size: $font-size;
     margin-right: 0.2em;
   }
+  @media (max-width: $tablet) {
+    margin-bottom: 1rem;
+  }
 }
 
 .Article_one {
   @extend .Article;
   &_title {
     @include Article_title;
+    @media (max-width: $tablet) {
+      font-weight: weight(bold);
+      em {
+        font-weight: weight(bold);
+      }
+      margin: 0 0.5rem 0.5rem 0.5rem ;
+    }
   }
   &_author {
     @include Article_author;
+    @media (max-width: $tablet) {
+      margin: 0 -0.5rem 0 0.5rem ;
+    }
   }
   img{
     object-fit: cover;
@@ -92,12 +105,27 @@
   @extend .Article;
   &_bajada {
     @include Article_bajada;
+    @media (max-width: $tablet) {
+      padding: 0 0.5rem 0 0.5rem ;
+    }
   }
   &_title {
     @include Article_title;
+    @media (max-width: $tablet) {
+      font-weight: weight(bold);
+      em {
+        font-weight: weight(bold);
+      }
+      @media (max-width: $tablet) {
+        margin: 0 -0.2rem 0.5rem 0.2rem ;
+      }
+    }
   }
   &_author {
     @include Article_author;
+    @media (max-width: $tablet) {
+      margin: 0 -0.2rem 0.5rem 0.2rem ;
+    }
   }
 }
 
@@ -127,15 +155,18 @@
     width: 4rem;
     bottom: -$padding - $hr-border;
   }
+  @media (max-width: $tablet) {
+    margin: 0 1rem 0 1rem;
+  }
 }
 
 .Article_four {
   @extend .Article;
   height: 470px;
-  width: 280px;
+  width: 100%;
   border: $border-default;
   &_topContainer{
-    height: 80%;
+    height: 70%;
     width: inherit;
     img{
       object-fit: cover;
@@ -148,7 +179,7 @@
   }
   &_botContainer{
     width: 100%;
-    height: 35%;
+    height: 30%;
     background-color: #C40F4D;
     color:white;
     padding: 5px 10px 5px 10px;
@@ -176,6 +207,7 @@
 
 .Article_five {
   @extend .Article;
+  margin-bottom: 0;
   align-items: flex-start;
   &_title {
     @include Article_title;
@@ -191,15 +223,31 @@
       font-weight: inherit;
       margin:0;
     }
+    @media (max-width: $tablet) {
+      order:1;
+      font-size: fontSizes(regular);
+      margin: 0 0.5rem 0 0.5rem ;
+    }
   }
   &_author {
     @include Article_author;
     margin-bottom: 1.5em;
+    @media (max-width: $tablet) {
+      order:3;
+      margin: 0.5rem;
+    }
   }
   p{
     @include Article_bajada;
+    @media (max-width: $tablet) {
+      order:2;
+      margin: 0.5rem;
+    }
   }
   img{
     width: 100%;
+    @media (max-width: $tablet) {
+      order:0
+    }
   }
 }
