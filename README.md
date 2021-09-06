@@ -2,7 +2,7 @@
 
 ## Deploy
 
-https://ejercicio-practico-2dnahbfpz-rrchess.vercel.app/
+https://ejercicio-practico-j9jdmbwfx-rrchess.vercel.app/
 
 ## Objetivo 
 
