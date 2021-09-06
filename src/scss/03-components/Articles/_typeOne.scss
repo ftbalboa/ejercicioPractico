@@ -2,15 +2,16 @@
     @include Article;
     &_title {
       @include Article_title;
+      align-self: start;
       @media (max-width: $tablet) {
         font-weight: weight(bold);
-        padding: 0 0.5rem 0.5rem 0.5rem ;
+        @include mediaPadding;
       }
     }
     &_author {
       @include Article_author;
       @media (max-width: $tablet) {
-        padding: 0 -0.5rem 0 0.5rem ;
+        @include mediaPadding;
       }
     }
     img{

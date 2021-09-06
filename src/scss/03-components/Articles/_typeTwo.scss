@@ -1,22 +1,28 @@
 .Article_two {
     @include Article;
+    &_img{
+      display: none;
+      @media (max-width: $tablet) {
+        display: initial;
+      }
+    }
     &_bajada {
       @include Article_bajada;
       @media (max-width: $tablet) {
-        padding: 0 0.5rem 0 0.5rem ;
+        @include mediaPadding;
       }
     }
     &_title {
       @include Article_title;
       @media (max-width: $tablet) {
         font-weight: weight(bold);
-          margin: 0 -0.2rem 0.5rem 0.2rem ;
+        @include mediaPadding;
       }
     }
     &_author {
       @include Article_author;
       @media (max-width: $tablet) {
-        margin: 0 -0.2rem 0.5rem 0.2rem ;
+        @include mediaPadding;
       }
     }
   }

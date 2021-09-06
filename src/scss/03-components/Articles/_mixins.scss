@@ -11,7 +11,7 @@
     margin-right: 0.2em;
   }
   @media (max-width: $tablet) {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -66,4 +66,8 @@
   font-size: fontSizes(small);
   font-family: $secondary-font !important;
   padding: 2px 5px 2px 5px;
+}
+
+@mixin mediaPadding{
+  padding: 0 1rem 0.5rem 1rem ;
 }

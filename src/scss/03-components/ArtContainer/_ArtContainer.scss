@@ -6,19 +6,20 @@
   margin-left: 1rem;
   @media (max-width: $nav-mobile) {
     margin-top: $nav-height-responsive + 1rem;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
 .titleContainer {
+  @include hoverOpacity;
   margin-bottom: 0.5rem;
   font-weight: weight(bold);
   font-size: fontSizes(subTitle);
+  height: auto;
   a {
     font-weight: inherit;
     font-size: inherit;
-    &:hover {
-      opacity: 0.8;
-    }
   }
   @media (max-width: $tablet) {
     flex-direction: column;

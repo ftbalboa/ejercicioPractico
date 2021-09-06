@@ -5,9 +5,12 @@ export function ArticleTwo({ info }) {
   };
   return (
     <div className="Article_two">
+      <a href={info.url} className="Article_two_img">
+        <img src={info.img}/>
+      </a>
       <div className="Article_two_title">
         <a href={info.url}>
-          <em>{info.volanta}</em> 
+          <em>{info.volanta}</em>
           {info.titulo}
         </a>
       </div>
